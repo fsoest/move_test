@@ -2,12 +2,16 @@ name: maps-creator
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-  check-bats-version:
+  build-maps:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content
+
+      - name: setup python
+        uses: actions/setup-python@v4
         with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+          python-version: '3.11' # install the python version needed
+
+      - name: execute py script # run main.py
+        run: python mover.py

@@ -15,7 +15,7 @@ jobs:
 
       - name: execute py script # run main.py
         working-directory: .
-        run: python mover.py
+        run: python .github\workflows\mover.py
 
       - name: commit files
         run: |

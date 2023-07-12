@@ -1,6 +1,6 @@
 import json
 
-with open('mover.json', 'r') as file:
+with open('\.github\workflows\mover.json', 'r') as file:
     data = json.load(file)
 
 for output, inputs in data.items():
@@ -10,5 +10,4 @@ for output, inputs in data.items():
             with open(inp, 'r') as inp_file:
                 lines += inp_file.readlines()
                 lines += '\n'
-        print(lines)
         file.writelines(lines)

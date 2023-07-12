@@ -1,6 +1,6 @@
 import json
 
-with open('/.github/workflows/mover.json', 'r') as file:
+with open('.github/workflows/mover.json', 'r') as file:
     data = json.load(file)
 
 for output, inputs in data.items():

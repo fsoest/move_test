@@ -1,7 +1,7 @@
 This is no longer lel
 this is line 3
 
-The brown fox jumped over the lazy
+The quick brown fox jumps over the lazy dog.
 
 this is line 2
 this is line 2
